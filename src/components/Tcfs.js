@@ -1,8 +1,6 @@
 import React from 'react';
 import TcfCard from './TcfCard';
 
-import { connect } from 'react-redux';
-
 const Tcfs = props => {
 
   const mapTcfs = () => {
@@ -11,8 +9,8 @@ const Tcfs = props => {
       return (
         <TcfCard 
           key={ tcf.id }
-          // increaseVote={ props.increaseVote }
-          // decreaseVote={ props.decreaseVote }
+          increaseVote={ props.increaseVote }
+          decreaseVote={ props.decreaseVote }
           tcf={ tcf }
         />
       )
@@ -28,11 +26,5 @@ const Tcfs = props => {
     </div>
   )
 }
-
-const mapStateToProps = state => {
-  return {
-    tcfs: state.tcfs
-  }
-}
  
-export default connect(mapStateToProps)(Tcfs);
+export default Tcfs;

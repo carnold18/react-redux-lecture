@@ -19,6 +19,15 @@
   color: white;
 }
 
+.container {
+  display: flex;
+  margin: 20px 0 100px 0;
+}
+
+.card {
+  margin: auto;
+}
+
 .App-link {
   color: #61dafb;
 }
