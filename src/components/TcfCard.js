@@ -7,6 +7,7 @@ const TcfCard = props => {
     <div className='card'>
       <h2>Name: { tcf.name }</h2>
       <p>Votes: { tcf.votes }</p>
+      <img src={ tcf.image }></img>
       <br />
       <button onClick={() => {
         props.increaseVote(tcf.id)

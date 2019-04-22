@@ -1,5 +1,9 @@
 import React from 'react';
 import Tcfs from './Tcfs';
+import aspen from '../assets/aspen.jpeg';
+import cody from '../assets/cody.jpeg';
+import me from '../assets/me.jpeg';
+import erin from '../assets/erin.jpeg';
 
 class MainContainer extends React.Component {
   constructor() {
@@ -10,25 +14,25 @@ class MainContainer extends React.Component {
           id: 1,
           name: 'David',
           votes: 0,
-          image: ''
+          image: me
         },        
         2: {
           id: 2,
           name: 'Aspen',
           votes: 0,
-          image: ''
+          image: aspen
         },
         3: {
           id: 3,
           name: 'Erin',
           votes: 0,
-          image: ''
+          image: erin
         },
         4: {
           id: 4,
           name: 'Cody',
           votes: 0,
-          image: ''
+          image: cody
         },
       }
     }
