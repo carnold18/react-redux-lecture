@@ -1,5 +1,6 @@
 import React from 'react';
 import TcfCard from './TcfCard';
+import { connect } from 'react-redux';
 
 const Tcfs = props => {
 
@@ -9,8 +10,6 @@ const Tcfs = props => {
       return (
         <TcfCard 
           key={ tcf.id }
-          increaseVote={ props.increaseVote }
-          decreaseVote={ props.decreaseVote }
           tcf={ tcf }
         />
       )
@@ -26,5 +25,12 @@ const Tcfs = props => {
     </div>
   )
 }
+
+const mapStateToProps = beef => {
+  console.log(beef)
+  return {
+    tcfs: beef.tcfReducer.tcfs
+  }
+}
  
-export default Tcfs;
+export default connect(mapStateToProps)(Tcfs);
