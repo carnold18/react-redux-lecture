@@ -3,6 +3,7 @@ import Tcfs from './Tcfs';
 import aspen from '../assets/aspen.jpeg';
 import chris from '../assets/chris.jpeg'
 import cody from '../assets/cody.jpeg';
+import ix from '../assets/ix.jpeg'
 import me from '../assets/me.jpeg';
 
 class MainContainer extends React.Component {
@@ -34,6 +35,12 @@ class MainContainer extends React.Component {
           votes: 0,
           image: cody
         },
+        5: {
+          id: 5,
+          name: 'Ix',
+          votes: 0,
+          image: ix
+        }
       }
     }
   }
