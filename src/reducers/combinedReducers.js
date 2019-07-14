@@ -1,8 +1,8 @@
 import { combineReducers } from 'redux';
 import headerReducer from './headerReducer';
-import tcfReducer from './tcfReducer';
+import bowieReducer from './bowieReducer';
 
 export default combineReducers({
   headerReducer,
-  tcfReducer
+  bowieReducer
 })

@@ -1,65 +1,59 @@
 import React from 'react';
-import Tcfs from './Tcfs';
+import Bowies from './Bowies';
 
 
 class MainContainer extends React.Component {
   // constructor() {
   //   super();
-    // this.state = {
-    //   tcfs: {
-    //     1: {
-    //       id: 1,
-    //       name: 'David',
-    //       votes: 0,
-    //       image: me
-    //     },        
-    //     2: {
-    //       id: 2,
-    //       name: 'Aspen',
-    //       votes: 0,
-    //       image: aspen
-    //     },
-    //     3: {
-    //       id: 3,
-    //       name: 'Chris',
-    //       votes: 0,
-    //       image: chris
-    //     },
-    //     4: {
-    //       id: 4,
-    //       name: 'Cody',
-    //       votes: -9000,
-    //       image: cody
-    //     },
-    //     5: {
-    //       id: 5,
-    //       name: 'Ix',
-    //       votes: 0,
-    //       image: ix
-    //     }
-    //   }
-    // }
+  //   this.state = {
+  //     bowies: {
+  //       1: {
+  //         id: 1,
+  //         name: 'Baby Bowie',
+  //         votes: 0,
+  //         image: babyBowie
+  //       },        
+  //       2: {
+  //         id: 2,
+  //         name: 'Hipster Bowie',
+  //         votes: 0,
+  //         image: hipsterBowie
+  //       },
+  //       3: {
+  //         id: 3,
+  //         name: 'Ziggy Stardust',
+  //         votes: 0,
+  //         image: ziggyBowie
+  //       },
+  //       4: {
+  //         id: 4,
+  //         name: 'Goblin King',
+  //         votes: -1000,
+  //         image: goblinBowie
+  //       },
+  //     }
+  //   }
   // }
 
-  // increaseVote = (tcfId) => {
+  // increaseVote = (bowieId) => {
   //   this.setState({
-  //     tcfs: {
-  //       ...this.state.tcfs,
-  //       [tcfId]: {
-  //         ...this.state.tcfs[tcfId],
-  //         votes: this.state.tcfs[tcfId]['votes'] + 1
+  //     bowies: {
+  //       ...this.state.bowies,
+  //       [bowieId]: {
+  //         ...this.state.bowies[bowieId],
+  //         votes: this.state.bowies[bowieId]['votes'] + 1
   //       }
   //     }
   //   })
   // }
 
-  // decreaseVote = (tcfId) => {
+  // decreaseVote = (bowieId) => {
   //   this.setState({
-  //     tcfs: {
-  //       ...this.state.tcfs,
-  //       [tcfId]: {
-  //         ...this.state.tcfs[tcfId],
-  //         votes: this.state.tcfs[tcfId]['votes'] - 1
+  //     bowies: {
+  //       ...this.state.bowies,
+  //       [bowieId]: {
+  //         ...this.state.bowies[bowieId],
+  //         votes: this.state.bowies[bowieId]['votes'] - 1
   //       }
   //     }
   //   })
@@ -68,7 +62,7 @@ class MainContainer extends React.Component {
   render() {
     return (
       <div>
-        <Tcfs 
+        <Bowies 
           increaseVote={ this.increaseVote }
           decreaseVote={ this.decreaseVote }
         />

@@ -1,24 +1,24 @@
 import React from 'react';
 import { connect } from 'react-redux';
-import { increaseVote, decreaseVote } from '../actions/tcfActions';
+import { increaseVote, decreaseVote } from '../actions/bowieActions';
 
-const TcfCard = props => {
-  const { tcf } = props;
+const BowieCard = props => {
+  const { bowie } = props;
   console.log('connect', connect)
 
   return (
     <div className='card'>
-      <h2>Name: { tcf.name }</h2>
-      <p>Votes: { tcf.votes }</p>
-      <img src={ tcf.image } alt={ tcf.name }></img>
+      <h2>Name: { bowie.name }</h2>
+      <p>Votes: { bowie.votes }</p>
+      <img src={ bowie.image } alt={ bowie.name }></img>
       <br />
       <button onClick={() => {
-        props.increaseVote(tcf.id)
+        props.increaseVote(bowie.id)
       }}>
         Upvote
       </button>
       <button onClick={() => {
-        props.decreaseVote(tcf.id)
+        props.decreaseVote(bowie.id)
       }}>
         Downvote
       </button>
@@ -33,4 +33,4 @@ const mapDispatchToProps = dispatch => {
   }
 }
 
-export default connect(null, mapDispatchToProps)(TcfCard);
+export default connect(null, mapDispatchToProps)(BowieCard);
