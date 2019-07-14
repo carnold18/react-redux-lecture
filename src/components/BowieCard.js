@@ -1,4 +1,11 @@
 import React from 'react';
+// step 19 import connect so that we can work with our functions
+// increase and decreasevotes
+
+import { connect } from 'react-redux';
+
+// in order to be able to use the functions (actions)
+// we have to dispatch the actions
 
 const BowieCard = props => {
   const { bowie } = props;
