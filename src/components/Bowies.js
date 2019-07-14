@@ -1,6 +1,5 @@
 import React from 'react';
 import BowieCard from './BowieCard';
-import { connect } from 'react-redux';
 
 const Bowies = props => {
 
@@ -10,6 +9,8 @@ const Bowies = props => {
       return (
         <BowieCard 
           key={ bowie.id }
+          increaseVote={ props.increaseVote }
+          decreaseVote={ props.decreaseVote }
           bowie={ bowie }
         />
       )
@@ -26,11 +27,6 @@ const Bowies = props => {
   )
 }
 
-const mapStateToProps = beef => {
-  console.log(beef)
-  return {
-    bowies: beef.bowieReducer.bowies
-  }
-}
+
  
-export default connect(mapStateToProps)(Bowies);
+export default Bowies;

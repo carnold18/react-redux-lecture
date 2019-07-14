@@ -69,6 +69,7 @@ class MainContainer extends React.Component {
         <Bowies 
           increaseVote={ this.increaseVote }
           decreaseVote={ this.decreaseVote }
+          bowies = {this.state.bowies}
         />
         <h1> THANKS FOR VOTING </h1>
       </div>
