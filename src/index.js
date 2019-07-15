@@ -6,7 +6,9 @@ import App from './App';
 // step 1 import createStore
 import { createStore } from 'redux';
 // step 10 import bowieReducer
-import bowieReducer from './reducers/bowieReducer';
+// import bowieReducer from './reducers/bowieReducer';
+// import headerReducer from './reducers/headerReducer'
+import reducer from './reducers'
 // step 11 import Provider
 import { Provider } from 'react-redux';
 
@@ -14,7 +16,7 @@ import { Provider } from 'react-redux';
 // questions for students:
 //  - what do you need to pass into this function? 
 //  - what does it actually do?
-const store = createStore(bowieReducer);
+const store = createStore(reducer);
 // step 3 create the reducer folder
 // step 4 create the bowieReducer.js file
 

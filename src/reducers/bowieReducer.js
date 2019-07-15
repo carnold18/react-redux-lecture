@@ -45,29 +45,29 @@ const initialState = {
 
 // step 20 move functions from MainContainer to here.
 
-increaseVote = (bowieId) => {
-    this.setState({
-      bowies: {
-        ...this.state.bowies,
-        [bowieId]: {
-          ...this.state.bowies[bowieId],
-          votes: this.state.bowies[bowieId]['votes'] + 1
-        }
-      }
-    })
-  }
+// increaseVote = (bowieId) => {
+//     this.setState({
+//       bowies: {
+//         ...this.state.bowies,
+//         [bowieId]: {
+//           ...this.state.bowies[bowieId],
+//           votes: this.state.bowies[bowieId]['votes'] + 1
+//         }
+//       }
+//     })
+//   }
 
-  decreaseVote = (bowieId) => {
-    this.setState({
-      bowies: {
-        ...this.state.bowies,
-        [bowieId]: {
-          ...this.state.bowies[bowieId],
-          votes: this.state.bowies[bowieId]['votes'] - 1
-        }
-      }
-    })
-  }
+//   decreaseVote = (bowieId) => {
+//     this.setState({
+//       bowies: {
+//         ...this.state.bowies,
+//         [bowieId]: {
+//           ...this.state.bowies[bowieId],
+//           votes: this.state.bowies[bowieId]['votes'] - 1
+//         }
+//       }
+//     })
+//   }
 
 const bowieReducer = (state = initialState, action) => {
     // step 14 check what the action is 
@@ -78,6 +78,36 @@ const bowieReducer = (state = initialState, action) => {
     //  - what does your statement switch on? (action)
     //  - it is passed in as a payload based on how state changes
     switch(action.type) {
+        // step 21 create the first switch statement and
+        // remove setState
+        // replace with spreading state
+
+        case 'INCREASE_VOTE': 
+        return {
+            ...state,
+                bowies: {
+                  ...state.bowies,
+                  // step 23
+                  // replace the bowieId with action.payload
+                  [action.payload.id]: {
+                    ...state.bowies[action.payload.id],
+                    votes: state.bowies[action.payload.id]['votes'] + 1
+                  }
+            }
+        }
+        case 'DECREASE_VOTE': 
+        return {
+            ...state,
+                bowies: {
+                  ...state.bowies,
+                  // step 23
+                  // replace the bowieId with action.payload
+                  [action.payload.id]: {
+                    ...state.bowies[action.payload.id],
+                    votes: state.bowies[action.payload.id]['votes'] - 1
+                  }
+            }
+        }
         // step 8 input a default condition
         default: 
             return state;

@@ -4,6 +4,9 @@ import React from 'react';
 
 import { connect } from 'react-redux';
 
+//step 25
+import { increaseVote } from '../actions/bowieActions';
+import { decreaseVote } from '../actions/bowieActions';
 // in order to be able to use the functions (actions)
 // we have to dispatch the actions
 
@@ -30,4 +33,15 @@ const BowieCard = props => {
   )
 }
 
-export default BowieCard;
+// step 24
+const mapDispatchToProps = (dispatch) => {
+  return {
+    increaseVote: id => dispatch(increaseVote(id)),
+    decreaseVote: id => dispatch(decreaseVote(id))
+  }
+}
+
+// step 26 
+// add the connect and pass null as the first argument
+// because there is no state
+export default connect(null,mapDispatchToProps)(BowieCard);

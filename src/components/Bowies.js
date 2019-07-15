@@ -35,7 +35,7 @@ const Bowies = props => {
 const mapStateToProps = (state) => {
   console.log("this is our state:", state)
   return {
-    bowies: state.bowies
+    bowies: state.bowieReducer.bowies
   }
 }
 

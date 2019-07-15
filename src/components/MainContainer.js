@@ -67,8 +67,8 @@ class MainContainer extends React.Component {
     return (
       <div>
         <Bowies 
-          increaseVote={ this.increaseVote }
-          decreaseVote={ this.decreaseVote }
+          // increaseVote={ this.increaseVote }
+          // decreaseVote={ this.decreaseVote }
           // Step 17 comment this out
           // bowies = {this.state.bowies}
         />
